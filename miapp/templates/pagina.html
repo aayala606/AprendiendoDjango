@@ -1,0 +1,15 @@
+{% extends 'layout.html'%}
+{% load filters %}
+{%block title%} Página de Pruebas {%endblock%}
+
+{%block content%}
+<h1>Página de mi Web </h1>  
+<p> {{"Creado por Ana Maria"}}</p> 
+
+
+{{"Ana Ayala"|saludo|safe}}
+
+
+
+
+{%endblock%}

@@ -1,0 +1,69 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es"> 
+<head> 
+    <meta charset = "utf-8"/>
+    <title>
+        {%block title%}
+
+        {% endblock%}
+        Ana Ayala
+     </title>
+     <link rel="stylesheet" type = "text/css" href="{% static 'css/styles.css'%}">
+
+</head> 
+<body>
+    <!--Cabecera de la página-->
+    <header>
+        <div id ="logotipo">
+            <img src="{% static 'imagenes/logo.png'%}"/>
+            <h1>Sitio web con Django</h1>
+        </div>
+    </header>
+ 
+    <nav>
+        <ul>
+            <li>
+                <a href= "{% url 'inicio' %}">Inicio</a>
+            </li>
+             <li>
+                <a href= "{% url 'articulos' %}">Articulos</a>
+            </li>
+              <li>
+                <a href= "{% url 'create' %}">Crear Articulo</a>
+            </li>
+            <li>
+                <a href= "{% url 'create_full' %}">Crear Articulo 2</a>
+            </li>
+             <li>
+                 <a href= "{% url 'hola_mundo' %}">Hola Mundo</a>
+            </li>
+             <li>
+                 <a href= "{% url 'pagina' %}">Páginas de pruebas</a>
+            </li>
+                <li>
+                 <a href= "{% url 'contacto' %}">Contacto</a>
+            </li>
+        <ul/>
+    </nav>
+
+<div class="barra">
+    <span class="esquina-izquierda"></span>
+    <span class="relleno-barra"></span>
+    <span class="esquina-derecha"></span>
+</div>
+    <div id="content">
+        <div class="box">
+           <h2 class="title"></h2>
+            {% block content%}
+            <strong>Contenido del bloque original</strong>
+            {% endblock%}
+        </div>
+    </div>
+
+    <footer>
+        Master en Python &copy 2023 Ana ayala - {%now "d/m/Y h:m"%}
+    </footer>
+</body>
+</html>
+
