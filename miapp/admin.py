@@ -7,6 +7,7 @@ from .models import Article, Category
 class ArticleAdmin(admin.ModelAdmin):
     readonly_fields= ('created_at', 'updated_at')
 
+#Pruebas para ver si estan vinculados
 admin.site.register(Article,ArticleAdmin)
 admin.site.register(Category)
 
